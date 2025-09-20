@@ -1,0 +1,10 @@
+name: Manual test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hi ${{ github.actor }} 👋 — workflow_dispatch works!"
