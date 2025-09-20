@@ -1,0 +1,10 @@
+name: Test Dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      ping: { description: 'say hi', required: false, type: string }
+jobs:
+  ok:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "It works ${{ inputs.ping }}"
